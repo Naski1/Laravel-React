@@ -2,3 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Glassmorphism Effect */
+.sidebar-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Efek hover untuk card ikon */
+.sidebar-menu-button:hover .rounded-full {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}

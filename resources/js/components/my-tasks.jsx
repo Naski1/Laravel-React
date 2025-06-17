@@ -52,17 +52,16 @@ export default function MyTasks() {
           img: '/img/Horizon.png',
         }
       ].map((task, idx) => (
-        <article className="rounded-xl p-3 flex flex-col gap-1 cursor-pointer" style={{ backgroundColor: task.bg }}>
-  <div className="flex items-center justify-between">
-    <img src={task.img} className="w-8 h-8" alt="Task logo" />
-    <div className="flex gap-2 items-center text-gray-400">
-      <FontAwesomeIcon icon={faCheckCircle} />
-    </div>
-  </div>
-  <h3 className="text-sm font-bold text-[#0f1f1e] leading-tight">{task.title}</h3>
-  <p className="text-xs text-[#6b7280] leading-tight">{task.desc}</p>
-</article>
-
+        <article key={idx} className="rounded-xl p-4 flex flex-col gap-2 cursor-pointer" style={{ backgroundColor: task.bg }}>
+          <div className="flex items-center justify-between">
+            <img src={task.img} className="w-10 h-10" alt="Task logo" />
+            <div className="flex gap-2 items-center text-gray-400">
+              <FontAwesomeIcon icon={faCheckCircle} />
+            </div>
+          </div>
+          <h3 className="text-base font-bold text-[#0f1f1e] leading-tight">{task.title}</h3>
+          <p className="text-sm text-[#6b7280] leading-tight">{task.desc}</p>
+        </article>
       ))}
     </section>
   );
